@@ -15,10 +15,6 @@ dist/
 *.egg-info/
 .eggs/
 
-# Supplementary media (not part of the source release)
-media/
-*.mp4
-
 # Virtual environments
 .venv/
 venv/
