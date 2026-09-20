@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mistik2-memory"
+version = "1.8.0"
+description = "Local governed personal-fact store for companion hosts: provenance, corrections, tombstones, supersession, and recoverable persistence."
+authors = [{name = "panosk"}]
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+
+[project.scripts]
+mistik2-memory-bench = "mistik_memory.benchmark:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+encryption = ["cryptography>=42"]
+test = ["pytest>=8", "cryptography>=42"]
+
+[tool.setuptools.package-data]
+mistik_memory = ["aliases.json", "py.typed", "benchmark_data/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+filterwarnings = ["ignore:forget_fact_with_details removes facts:DeprecationWarning"]
+markers = ["v1_defaults: exercise production constructor defaults", "legacy_defaults: explicitly exercise pre-1.0 constructor defaults"]
+
+[project.urls]
+Documentation = "https://github.com/obscuraknight/mistik2-memory#readme"
+Source = "https://github.com/obscuraknight/mistik2-memory"
+Issues = "https://github.com/obscuraknight/mistik2-memory/issues"

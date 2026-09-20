@@ -1,0 +1,21 @@
+include LICENSE
+include NOTICE
+include AUTHORS.md
+include MANIFESTO.md
+include README.md
+include CHANGELOG.md
+include CONTRIBUTING.md
+include SECURITY.md
+include DURABILITY.md
+include UPGRADING.md
+include BENCHMARKING.md
+include BENCHMARK-RESULTS.md
+include RELEASE-VALIDATION.md
+include DETECTIVE-FUNCTIONAL-VALIDATION.md
+include ADVERSARIAL-IDENTITY-FORGETTING.md
+include STRESS-HARDENING-1.8.0.md
+recursive-include docs *.md
+recursive-include src/mistik_memory *.json *.pyi py.typed
+recursive-include tests *.py
+recursive-include .github *.yml *.yaml
+prune media

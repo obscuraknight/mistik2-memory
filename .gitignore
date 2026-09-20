@@ -1,0 +1,43 @@
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Supplementary media (not part of the source release)
+media/
+*.mp4
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local tooling / editors
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Local benchmark/output data
+benchmark-results/
+new-results/
+*.log
+
+# Local memory/runtime state
+*.lock
+*.transaction.json
+*_cold.json
+*_corrections.json
